@@ -2,6 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .px-container {
+    padding-left: 6rem;  /* Default padding */
+    padding-right:6rem; /* Default padding */
+  }
+}
+
+@media (max-width: 640px) {
+  .px-container {
+    padding-left: 4rem;  /* Adjust values as needed */
+    padding-right: 4rem; /* Adjust values as needed */
+  }
+}
+
+@media (max-width: 480px) {
+  .px-container {
+    padding-left: 1rem;  /* Adjust values as needed */
+    padding-right: 1rem; /* Adjust values as needed */
+  }
+}
+
+@media (max-width: 360px) {
+  .px-container {
+    padding-left: 0.5rem;  /* Adjust values as needed */
+    padding-right: 0.5rem; /* Adjust values as needed */
+  }
+}
+
+/* Your color scheme and other utility classes */
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -26,8 +55,16 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+/* Other utility classes */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
+
+
+
+section {
+  @apply px-container;
+}
+
