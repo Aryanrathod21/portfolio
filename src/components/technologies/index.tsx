@@ -7,6 +7,7 @@ const Technologies = (props: Props) => {
   return (
     <section>
       <div>
+      <div className="border-4 border-green-500 p-4 rounded-xl">
         <div className="xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl text-3xl font-bold flex justify-center items-center text-black lg:pt-10 md:pt-8 sm:pt-6 pt-4 pb-4">
           Core Technologies
         </div>
@@ -15,8 +16,8 @@ const Technologies = (props: Props) => {
           capabilities to create robust solutions. This hands-on experience has
           enhanced my proficiency and understanding of these tools.
         </div>
-
-        <div>
+        </div>
+        <div className="pt-6">
           <Techgrid />
         </div>
       </div>

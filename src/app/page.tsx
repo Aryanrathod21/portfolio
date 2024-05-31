@@ -1,6 +1,7 @@
 import About from "@/components/about";
 import Banner from "@/components/banner";
 import Homepage from "@/components/home";
+import Projectdesc from "@/components/projectdesc";
 import Projects from "@/components/projects";
 import Technologies from "@/components/technologies";
 import Image from "next/image";
@@ -13,6 +14,7 @@ export default function Home() {
       <About/>
       <Technologies/>
       <Projects/>
+      <Projectdesc/>
  </div> 
   );
 }

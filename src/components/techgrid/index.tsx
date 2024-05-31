@@ -1,9 +1,9 @@
 'use client'
+import React, { useState, useEffect } from "react";
 import { RiNextjsFill, RiReactjsLine, RiTailwindCssFill } from "react-icons/ri";
 import { TbFileTypeHtml } from "react-icons/tb";
 import { BsFiletypeCss } from "react-icons/bs";
 import { MdTabletAndroid } from "react-icons/md";
-import React, { useState, useEffect } from "react";
 
 const CategoriesData = [
   {
@@ -69,10 +69,10 @@ const Techgrid = () => {
         {CategoriesData.map((cate, index) => (
           <div key={index} className="relative group pb-12">
             <div
-              className="relative aspect-square transition-all duration-500 ease-in-out flex flex-col items-center justify-center p-8 border rounded-lg hover:bg-gray-200 transform"
+              className="relative aspect-square transition-all duration-500 ease-in-out flex flex-col items-center justify-center p-8 border rounded-lg hover:bg-gray-200 transform shadow-lg shadow-black" // Added shadow classes
               onClick={() => handleBoxClick(index)}
             >
-              <cate.icon className={`text-8xl ${selectedBox === index ? 'text-gray-700' : 'text-black'}`} />
+              {React.createElement(cate.icon, { className: `text-8xl ${selectedBox === index ? 'text-gray-700' : 'text-black'}` })}
               <p className="text-center mt-4 text-lg text-gray-500">
                 {cate.description.length > 100
                   ? <>
