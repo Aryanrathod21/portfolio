@@ -69,7 +69,7 @@ const Techgrid = () => {
         {CategoriesData.map((cate, index) => (
           <div key={index} className="relative group pb-12">
             <div
-              className="relative aspect-square transition-all duration-500 ease-in-out flex flex-col items-center justify-center p-8 border rounded-lg hover:bg-gray-200 transform shadow-lg shadow-black" // Added shadow classes
+              className="relative aspect-square transition-all duration-500 ease-in-out flex flex-col items-center justify-center p-8 border rounded-lg hover:bg-gray-200 bg-white transform shadow-lg shadow-black" // Added shadow classes
               onClick={() => handleBoxClick(index)}
             >
               {React.createElement(cate.icon, { className: `text-8xl ${selectedBox === index ? 'text-gray-700' : 'text-black'}` })}

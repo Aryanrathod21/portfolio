@@ -1,5 +1,6 @@
 import About from "@/components/about";
 import Banner from "@/components/banner";
+import Contact from "@/components/contact";
 import Homepage from "@/components/home";
 import Projectdesc from "@/components/projectdesc";
 import Projects from "@/components/projects";
@@ -15,6 +16,7 @@ export default function Home() {
       <Technologies/>
       <Projects/>
       <Projectdesc/>
+      <Contact/>
  </div> 
   );
 }

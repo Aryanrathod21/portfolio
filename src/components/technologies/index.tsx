@@ -7,7 +7,7 @@ const Technologies = (props: Props) => {
   return (
     <section>
       <div>
-      <div className="border-4 border-green-500 p-4 rounded-xl">
+      <div className="border-4 border-green-500 p-4 rounded-xl bg-green-100">
         <div className="xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl text-3xl font-bold flex justify-center items-center text-black lg:pt-10 md:pt-8 sm:pt-6 pt-4 pb-4">
           Core Technologies
         </div>
