@@ -1,5 +1,6 @@
 import React from "react";
 import Techgrid from "../techgrid";
+import Projgrid from "../projgrid";
 
 type Props = {};
 
@@ -16,7 +17,7 @@ const Projects = (props: Props) => {
         </div>
         </div>
         <div className="pt-6">
-          <Techgrid />
+          <Projgrid/>
         </div>
       </div>
     </section>
