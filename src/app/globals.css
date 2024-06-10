@@ -83,6 +83,19 @@ section {
   }
 }
 
+/* Add this to your CSS file */
+.active {
+  border-bottom: 3px solid white; /* Adjust thickness as needed */
+}
+/* Add this to your CSS file */
+.active {
+  border-bottom: 3px solid white; /* Adjust thickness as needed */
+}
+
+/* Add transition effect for smooth animation */
+ul li {
+  transition: border-bottom 0.3s ease;
+}
 
 
 

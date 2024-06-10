@@ -1,10 +1,11 @@
+// src/app/layout.tsx
 'use client'
 import React from 'react';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import { VisibilityProvider, useVisibility } from '@/components/visible/VisibilityContext'; // Adjust the path as needed
+import { VisibilityProvider, useVisibility } from '@/components/visible/VisibilityContext';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -13,7 +14,7 @@ const RootLayout = ({ children }) => {
     <VisibilityProvider>
       <html lang="en">
         <head></head>
-        <body>
+        <body className={inter.className}>
           <LayoutContent>{children}</LayoutContent>
         </body>
       </html>
@@ -23,10 +24,10 @@ const RootLayout = ({ children }) => {
 
 const LayoutContent = ({ children }) => {
   const { isVisible } = useVisibility();
-  
+
   return (
     <>
-      {isVisible && <Header />}
+      {/* {isVisible && <Header scrollToSection={() => {}} />} Placeholder */}
       {children}
       {isVisible && <Footer />}
     </>

@@ -1,11 +1,19 @@
-'use client'
 import React, { useState } from 'react';
 
-const Header = (props) => {
+const Header = ({ scrollToSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeMenuItem, setActiveMenuItem] = useState(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleMenuClick = (section) => {
+    scrollToSection(section);
+    setActiveMenuItem(section);
+    setTimeout(() => {
+      setActiveMenuItem(null);
+    }, 3000); // Hide active menu item after 3 seconds
   };
 
   return (
@@ -16,10 +24,10 @@ const Header = (props) => {
           <p className='text-green-500 text-3xl font-extrabold'>.</p>
         </div>
         <ul className='hidden lg:flex flex-row gap-8 text-white text-xl font-medium'>
-          <li>Home</li>
-          <li>Resume</li>
-          <li>Projects</li>
-          <li>Contact</li>
+          <li className={activeMenuItem === 'home' ? 'active' : ''} onClick={() => handleMenuClick('home')}>Home</li>
+          <li className={activeMenuItem === 'about' ? 'active' : ''} onClick={() => handleMenuClick('about')}>Resume</li>
+          <li className={activeMenuItem === 'projects' ? 'active' : ''} onClick={() => handleMenuClick('projects')}>Projects</li>
+          <li className={activeMenuItem === 'contact' ? 'active' : ''} onClick={() => handleMenuClick('contact')}>Contact</li>
         </ul>
         <div className='lg:hidden'>
           <button
@@ -34,10 +42,10 @@ const Header = (props) => {
       </section>
       {isMenuOpen && (
         <div className='lg:hidden bg-black shadow-sm flex flex-col items-center justify-center fixed top-16 left-0 w-full z-50'>
-          <a href="#home" className='py-2 text-white text-xl font-medium'>Home</a>
-          <a href="#resume" className='py-2 text-white text-xl font-medium'>Resume</a>
-          <a href="#projects" className='py-2 text-white text-xl font-medium'>Projects</a>
-          <a href="#contact" className='py-2 text-white text-xl font-medium'>Contact</a>
+          <a onClick={() => { handleMenuClick('home'); toggleMenu(); }} className='py-2 text-white text-xl font-medium'>Home</a>
+          <a onClick={() => { handleMenuClick('about'); toggleMenu(); }} className='py-2 text-white text-xl font-medium'>Resume</a>
+          <a onClick={() => { handleMenuClick('projects'); toggleMenu(); }} className='py-2 text-white text-xl font-medium'>Projects</a>
+          <a onClick={() => { handleMenuClick('contact'); toggleMenu(); }} className='py-2 text-white text-xl font-medium'>Contact</a>
         </div>
       )}
     </>
