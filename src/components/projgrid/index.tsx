@@ -91,9 +91,9 @@ const Projgrid = () => {
             >
               {React.createElement(cate.icon, { className: `text-8xl ${selectedBox === index ? 'text-gray-700' : 'text-black'}` })}
               <p className="text-center mt-4 text-lg text-gray-500">
-                {cate.description.length > 100
+                {cate.description.length > 40
                   ? <>
-                      {cate.description.slice(0, 100)}<span onClick={() => handleBoxClick(index)} className="text-blue-500 cursor-pointer">...more</span>
+                      {cate.description.slice(0, 40)}<span onClick={() => handleBoxClick(index)} className="text-blue-500 cursor-pointer">...more</span>
                     </>
                   : cate.description
                 }

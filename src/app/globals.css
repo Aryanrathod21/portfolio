@@ -4,8 +4,15 @@
 
 @layer utilities {
   .px-container {
-    padding-left: 6rem;  /* Default padding */
-    padding-right:6rem; /* Default padding */
+    padding-left: 14rem;  /* Default padding */
+    padding-right:14rem; /* Default padding */
+  }
+}
+
+@media (max-width: 1024px) {
+  .px-container {
+    padding-left: 6rem;  /* Adjust values as needed */
+    padding-right: 6rem; /* Adjust values as needed */
   }
 }
 
@@ -18,15 +25,15 @@
 
 @media (max-width: 480px) {
   .px-container {
-    padding-left: 1rem;  /* Adjust values as needed */
-    padding-right: 1rem; /* Adjust values as needed */
+    padding-left: 2rem;  /* Adjust values as needed */
+    padding-right: 2rem; /* Adjust values as needed */
   }
 }
 
 @media (max-width: 360px) {
   .px-container {
-    padding-left: 0.5rem;  /* Adjust values as needed */
-    padding-right: 0.5rem; /* Adjust values as needed */
+    padding-left: 1.5rem;  /* Adjust values as needed */
+    padding-right: 1.5rem; /* Adjust values as needed */
   }
 }
 

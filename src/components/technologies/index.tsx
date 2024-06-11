@@ -1,5 +1,6 @@
 import React from "react";
 import Techgrid from "../techgrid";
+import TechPercent from "../techpercent";
 
 type Props = {};
 
@@ -17,6 +18,9 @@ const Technologies = (props: Props) => {
           enhanced my proficiency and understanding of these tools.
         </div>
         </div>
+        <div className="pt-6">
+      <TechPercent/>
+    </div>
         <div className="pt-6">
           <Techgrid />
         </div>
