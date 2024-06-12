@@ -1,3 +1,5 @@
+// src/app/layout.tsx
+'use client'
 import React, { ReactNode } from 'react';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
@@ -29,7 +31,7 @@ interface LayoutContentProps {
 }
 
 const LayoutContent: React.FC<LayoutContentProps> = ({ children }) => {
-  const { isVisible }: { isVisible: boolean } = useVisibility(); // Assuming isVisible is boolean
+  const { isVisible } = useVisibility();
 
   return (
     <>

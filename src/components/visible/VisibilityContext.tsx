@@ -1,11 +1,20 @@
 // src/components/visible/VisibilityContext.tsx
 'use client'
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-const VisibilityContext = createContext();
+interface VisibilityContextType {
+  isVisible: boolean;
+  setIsVisible: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
-export const VisibilityProvider = ({ children }) => {
-  const [isVisible, setIsVisible] = useState(true);
+interface VisibilityProviderProps {
+  children: ReactNode;
+}
+
+const VisibilityContext = createContext<VisibilityContextType | undefined>(undefined);
+
+export const VisibilityProvider: React.FC<VisibilityProviderProps> = ({ children }) => {
+  const [isVisible, setIsVisible] = useState<boolean>(true);
 
   return (
     <VisibilityContext.Provider value={{ isVisible, setIsVisible }}>
@@ -14,4 +23,10 @@ export const VisibilityProvider = ({ children }) => {
   );
 };
 
-export const useVisibility = () => useContext(VisibilityContext);
+export const useVisibility = (): VisibilityContextType => {
+  const context = useContext(VisibilityContext);
+  if (!context) {
+    throw new Error('useVisibility must be used within a VisibilityProvider');
+  }
+  return context;
+};
