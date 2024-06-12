@@ -24,7 +24,11 @@ const RootLayout: React.FC<LayoutProps> = ({ children }) => {
   );
 };
 
-const LayoutContent: React.FC = ({ children }) => {
+interface LayoutContentProps {
+  children: ReactNode;
+}
+
+const LayoutContent: React.FC<LayoutContentProps> = ({ children }) => {
   const { isVisible } = useVisibility();
 
   return (
