@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 
 interface HeaderProps {
-  scrollToSection: (section: string) => void;
+  scrollToSection: (section: Section) => void; // Adjusted to accept Section type
 }
 
 const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeMenuItem, setActiveMenuItem] = useState<string | null>(null);
+  const [activeMenuItem, setActiveMenuItem] = useState<Section | null>(null); // Adjusted to accept Section type
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const handleMenuClick = (section: string) => {
+  const handleMenuClick = (section: Section) => { // Adjusted to accept Section type
     scrollToSection(section);
     setActiveMenuItem(section);
     setTimeout(() => {
