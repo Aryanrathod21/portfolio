@@ -1,6 +1,4 @@
-// src/app/layout.tsx
-'use client'
-import React from 'react';
+import React, { ReactNode } from 'react';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { Inter } from 'next/font/google';
@@ -9,7 +7,11 @@ import { VisibilityProvider, useVisibility } from '@/components/visible/Visibili
 
 const inter = Inter({ subsets: ['latin'] });
 
-const RootLayout = ({ children }) => {
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const RootLayout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <VisibilityProvider>
       <html lang="en">
@@ -22,7 +24,7 @@ const RootLayout = ({ children }) => {
   );
 };
 
-const LayoutContent = ({ children }) => {
+const LayoutContent: React.FC = ({ children }) => {
   const { isVisible } = useVisibility();
 
   return (
