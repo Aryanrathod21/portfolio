@@ -24,10 +24,30 @@ const Header = ({ scrollToSection }) => {
           <p className='text-green-500 text-3xl font-extrabold'>.</p>
         </div>
         <ul className='hidden lg:flex flex-row gap-8 text-white text-xl font-medium'>
-          <li className={activeMenuItem === 'home' ? 'active' : ''} onClick={() => handleMenuClick('home')}>Home</li>
-          <li className={activeMenuItem === 'about' ? 'active' : ''} onClick={() => handleMenuClick('about')}>Resume</li>
-          <li className={activeMenuItem === 'projects' ? 'active' : ''} onClick={() => handleMenuClick('projects')}>Projects</li>
-          <li className={activeMenuItem === 'contact' ? 'active' : ''} onClick={() => handleMenuClick('contact')}>Contact</li>
+          <li
+            className={`cursor-pointer ${activeMenuItem === 'home' ? 'active' : ''}`}
+            onClick={() => handleMenuClick('home')}
+          >
+            Home
+          </li>
+          <li
+            className={`cursor-pointer ${activeMenuItem === 'about' ? 'active' : ''}`}
+            onClick={() => handleMenuClick('about')}
+          >
+            Resume
+          </li>
+          <li
+            className={`cursor-pointer ${activeMenuItem === 'projects' ? 'active' : ''}`}
+            onClick={() => handleMenuClick('projects')}
+          >
+            Projects
+          </li>
+          <li
+            className={`cursor-pointer ${activeMenuItem === 'contact' ? 'active' : ''}`}
+            onClick={() => handleMenuClick('contact')}
+          >
+            Contact
+          </li>
         </ul>
         <div className='lg:hidden'>
           <button
@@ -42,10 +62,42 @@ const Header = ({ scrollToSection }) => {
       </section>
       {isMenuOpen && (
         <div className='lg:hidden bg-black shadow-sm flex flex-col items-center justify-center fixed top-16 left-0 w-full z-50'>
-          <a onClick={() => { handleMenuClick('home'); toggleMenu(); }} className='py-2 text-white text-xl font-medium'>Home</a>
-          <a onClick={() => { handleMenuClick('about'); toggleMenu(); }} className='py-2 text-white text-xl font-medium'>Resume</a>
-          <a onClick={() => { handleMenuClick('projects'); toggleMenu(); }} className='py-2 text-white text-xl font-medium'>Projects</a>
-          <a onClick={() => { handleMenuClick('contact'); toggleMenu(); }} className='py-2 text-white text-xl font-medium'>Contact</a>
+          <a
+            onClick={() => {
+              handleMenuClick('home');
+              toggleMenu();
+            }}
+            className='py-2 text-white text-xl font-medium cursor-pointer'
+          >
+            Home
+          </a>
+          <a
+            onClick={() => {
+              handleMenuClick('about');
+              toggleMenu();
+            }}
+            className='py-2 text-white text-xl font-medium cursor-pointer'
+          >
+            Resume
+          </a>
+          <a
+            onClick={() => {
+              handleMenuClick('projects');
+              toggleMenu();
+            }}
+            className='py-2 text-white text-xl font-medium cursor-pointer'
+          >
+            Projects
+          </a>
+          <a
+            onClick={() => {
+              handleMenuClick('contact');
+              toggleMenu();
+            }}
+            className='py-2 text-white text-xl font-medium cursor-pointer'
+          >
+            Contact
+          </a>
         </div>
       )}
     </>

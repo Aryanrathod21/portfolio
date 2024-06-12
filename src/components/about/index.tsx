@@ -30,7 +30,7 @@ const About = (props: Props) => {
           height={330} 
           className='object-cover'
         />
-        <div className='absolute w-4/5 md:w-3/4 lg:w-1/2 h-24 bg-white bottom-[-42px] shadow-2xl flex justify-center items-center rounded-lg'>
+        <div className='absolute w-4/5 md:w-3/4 lg:w-2/3 h-24 bg-white bottom-[-42px] shadow-2xl flex justify-center items-center rounded-lg'>
           <div className='flex gap-4'>
             <div className='relative group'>
               <a href="https://www.instagram.com/ar.yan21_" target="_blank" rel="noopener noreferrer">

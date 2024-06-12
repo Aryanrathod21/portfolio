@@ -32,8 +32,8 @@
 
 @media (max-width: 360px) {
   .px-container {
-    padding-left: 1.5rem;  /* Adjust values as needed */
-    padding-right: 1.5rem; /* Adjust values as needed */
+    padding-left: 0.7rem;  /* Adjust values as needed */
+    padding-right: 0.7rem; /* Adjust values as needed */
   }
 }
 
