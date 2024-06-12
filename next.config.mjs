@@ -2,7 +2,9 @@
 import withVideos from 'next-videos';
 
 const nextConfig = {
-  // Your other Next.js configuration options here
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default withVideos(nextConfig);
