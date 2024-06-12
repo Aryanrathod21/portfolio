@@ -29,7 +29,7 @@ interface LayoutContentProps {
 }
 
 const LayoutContent: React.FC<LayoutContentProps> = ({ children }) => {
-  const { isVisible } = useVisibility();
+  const { isVisible }: { isVisible: boolean } = useVisibility(); // Assuming isVisible is boolean
 
   return (
     <>
