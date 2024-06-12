@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
+import { Section } from '../../../types'; // Adjust the path based on your project structure
 
 interface HeaderProps {
-  scrollToSection: (section: Section) => void; // Adjusted to accept Section type
+  scrollToSection: (section: Section) => void;
 }
 
 const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeMenuItem, setActiveMenuItem] = useState<Section | null>(null); // Adjusted to accept Section type
+  const [activeMenuItem, setActiveMenuItem] = useState<Section | null>(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const handleMenuClick = (section: Section) => { // Adjusted to accept Section type
+  const handleMenuClick = (section: Section) => {
     scrollToSection(section);
     setActiveMenuItem(section);
     setTimeout(() => {
