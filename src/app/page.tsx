@@ -37,12 +37,12 @@ export default function Home() {
   };
 
   useEffect(() => {
-    setIsVisible(true); // Ensure header and footer are visible when Home is rendered
+    setIsVisible(true); 
   }, [setIsVisible]);
 
   return (
     <div className="bg-slate-50">
-      <Header scrollToSection={scrollToSection} /> {/* Pass the scrollToSection function */}
+      <Header scrollToSection={scrollToSection} /> 
       <div ref={homeRef}><Homepage /></div>
       <div ref={aboutRef}><About /></div>
       <Technologies />

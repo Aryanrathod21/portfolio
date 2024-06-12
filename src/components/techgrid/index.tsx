@@ -91,7 +91,7 @@ const Techgrid = () => {
             {/* Background Blur */}
           </div>
           <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50 px-4 py-8 sm:px-6 sm:py-12 md:px-8 md:py-16">
-            <div className="bg-gray-900 bg-opacity-75 p-6 sm:p-8 md:p-10 rounded-lg shadow-lg w-full max-w-md sm:max-w-lg md:max-w-xl">
+            <div className="bg-gray-900 bg-opacity-75 p-6 sm:p-8 md:p-10 rounded-lg shadow-lg w-full max-w-md sm:max-w-lg md:max-w-xl max-h-[80vh] overflow-y-auto">
               <div className="text-center mb-4">
                 {React.createElement(CategoriesData[selectedBox].icon, { className: "text-6xl sm:text-7xl md:text-8xl text-white" })}
               </div>

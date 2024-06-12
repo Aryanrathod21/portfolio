@@ -1,34 +1,35 @@
 'use client'
 import React, { useState, useEffect } from "react";
-import { RiNextjsFill, RiReactjsLine, RiTailwindCssFill } from "react-icons/ri";
-import { TbFileTypeHtml } from "react-icons/tb";
-import { BsFiletypeCss } from "react-icons/bs";
-import { MdTabletAndroid } from "react-icons/md";
+import { RiPlantLine, RiTailwindCssFill } from "react-icons/ri";
+import { FaPlaneDeparture } from "react-icons/fa";
+import { GiTrophiesShelf, GiWhistle } from "react-icons/gi";
+import { CiMobile3 } from "react-icons/ci";
 
 const CategoriesData = [
   {
-    icon: RiNextjsFill,
-    description: "Next.js is a React framework known for its powerful server-side rendering and static site generation capabilities. Its file-based routing system, automatic code splitting, and CSS support simplify development, while TypeScript integration and easy API route creation enhance productivity. With Next.js, developers can build high-performance web applications with ease.",
+    icon: RiPlantLine,
+    title: "Lustria E-comm",
+    description: "During my internship at The Special Character Project, I developed Lustria, an e-commerce website specializing in plant sales. This platform was built using Next.js and Tailwind CSS, ensuring a modern and visually appealing design. The site is fully responsive, providing a seamless shopping experience across devices. Key features include a user-friendly interface, efficient navigation, and robust functionality to enhance the online purchasing process for plant enthusiasts.",
   },
   {
-    icon: RiReactjsLine,
-    description: "React.js, developed by Facebook, is a leading JavaScript library for building dynamic user interfaces. It enables developers to create reusable UI components that manage their own state, promoting modularity and scalability. React's virtual DOM improves performance by reducing direct manipulations of the actual DOM. Widely used for single-page applications, React's efficiency and strong ecosystem make it a top choice for modern web development.",
+    icon: FaPlaneDeparture,
+    title: "Viewport travel",
+    description: "During my college 6th semester, I developed Viewport, a travel website that allows users to choose vacation destinations and purchase tickets. This project was built using Next.js for the frontend, Tailwind CSS for styling, and Firebase for the backend. Viewport is fully responsive, ensuring an optimal user experience on all devices. Key features include destination search, ticket booking, and user-friendly navigation, making travel planning and booking seamless and efficient.",
   },
   {
-    icon: RiTailwindCssFill,
-    description: "Tailwind CSS is a utility-first framework for web development, offering customizable, low-level utility classes. It enables rapid creation of custom designs with minimal CSS, prioritizing composability and responsiveness. Tailwind facilitates consistent, responsive layouts and encourages rapid prototyping and iteration. Its utility-based approach makes it a popular choice among developers for building modern, responsive web interfaces.",
+    icon: GiTrophiesShelf,
+    title: "Xenesis Event",
+    description: "During my college tenure, I was selected to create a website for the upcoming college event, Xenesis. I developed the frontend using React.js and Tailwind CSS, focusing on ticket purchasing and confirmation functionalities. The website was fully responsive and provided a seamless user experience across all devices. Notably, the website was live during the event, showcasing my ability to deliver functional and aesthetically pleasing web solutions under real-world conditions.",
   },
   {
-    icon: TbFileTypeHtml,
-    description: "HTML, or HyperText Markup Language, is the backbone of the web, organizing content into elements like headings, paragraphs, links, and images. It employs tags and attributes to format content for browsers, forming the structure of web pages. HTML serves as the foundation for web development, facilitating the creation of accessible and well-structured websites that can be styled with CSS and made interactive with JavaScript.",
+    icon: GiWhistle,
+    title: "Coachmate",
+    description: "As team leader, I led the development of Coachmate, a website selected by the SSIP23 jury of Gujarat, a state-level hackathon competition, reaching the finals. This platform allows institutions to interface with various sports events like Khelmahakumbh, assign new coaches, and enable coaches to share athletes progress. Developed using the MERN stack, Coachmate offers a comprehensive solution for managing sports events and athlete development, demonstrating our teams capability in delivering impactful and functional web solutions.",
   },
   {
-    icon: BsFiletypeCss,
-    description: "CSS3, the latest version of Cascading Style Sheets, revolutionizes web design with advanced selectors, enhanced media queries for responsive layouts, and robust animations for engaging user experiences. It introduces modules like Flexbox and Grid for efficient and flexible layout design. With CSS3, developers can craft visually stunning and modern web interfaces more easily and precisely, elevating the quality of user interaction on the web.",
-  },
-  {
-    icon: MdTabletAndroid,
-    description: "Android development is the creation of mobile applications for Android devices using languages like Java or Kotlin and tools like Android Studio. Apps range from simple utilities to complex enterprise solutions, leveraging features like sensors and location services. It's a dynamic field offering vast opportunities for developers to innovate and reach users worldwide through the Google Play Store.",
+    icon: CiMobile3,
+    title: "Krushiaadhar App",
+    description: "As part of the SSIP22 state-level hackathon competition, I worked on Krushiaadhar, a mobile application developed in Android Studio. This app allows farmers to learn new farming techniques, stay updated on market trends, and save personal and farm-related information. Our team was tasked with creating both a website and a mobile application; I was a member of the mobile app team, ensuring we delivered a functional, user-friendly solution to support farmers.",
   },
 ];
 
@@ -73,13 +74,8 @@ const Techgrid = () => {
               onClick={() => handleBoxClick(index)}
             >
               {React.createElement(cate.icon, { className: `text-8xl ${selectedBox === index ? 'text-gray-700' : 'text-black'}` })}
-              <p className="text-center mt-4 text-lg text-gray-500">
-                {cate.description.length > 40
-                  ? <>
-                      {cate.description.slice(0, 40)}<span onClick={() => handleBoxClick(index)} className="text-blue-500 cursor-pointer">...more</span>
-                    </>
-                  : cate.description
-                }
+              <p className="text-center mt-4 text-2xl font-bold text-black">
+                {cate.title}
               </p>
             </div>
           </div>
@@ -91,7 +87,7 @@ const Techgrid = () => {
             {/* Background Blur */}
           </div>
           <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50 px-4 py-8 sm:px-6 sm:py-12 md:px-8 md:py-16">
-            <div className="bg-gray-900 bg-opacity-75 p-6 sm:p-8 md:p-10 rounded-lg shadow-lg w-full max-w-md sm:max-w-lg md:max-w-xl">
+            <div className="bg-gray-900 bg-opacity-75 p-6 sm:p-8 md:p-10 rounded-lg shadow-lg w-full max-w-md sm:max-w-lg md:max-w-xl max-h-[80vh] overflow-y-auto">
               <div className="text-center mb-4">
                 {React.createElement(CategoriesData[selectedBox].icon, { className: "text-6xl sm:text-7xl md:text-8xl text-white" })}
               </div>
