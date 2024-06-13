@@ -2,7 +2,12 @@
 import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 
-const skills = [
+interface Skill {
+  name: string;
+  percentage: number;
+}
+
+const skills: Skill[] = [
   { name: "NEXT.JS", percentage: 100 },
   { name: "TAILWINDCSS", percentage: 100 },
   { name: "REACT.JS", percentage: 100 },
@@ -26,7 +31,11 @@ const TechPercent = () => {
   );
 };
 
-const SkillBar = ({ skill }) => {
+interface SkillBarProps {
+  skill: Skill;
+}
+
+const SkillBar: React.FC<SkillBarProps> = ({ skill }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
