@@ -7,7 +7,7 @@ type Props = {}
 const About = (props: Props) => {
   const openResume = () => {
     // Replace 'path_to_your_pdf.pdf' with the actual path to your PDF file
-    window.open('/res.pdf', '_blank');
+    window.open('/Resume.pdf', '_blank');
   };
 
   return (
