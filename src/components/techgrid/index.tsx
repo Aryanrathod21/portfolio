@@ -4,6 +4,7 @@ import { RiNextjsFill, RiReactjsLine, RiTailwindCssFill } from "react-icons/ri";
 import { TbFileTypeHtml } from "react-icons/tb";
 import { BsFiletypeCss } from "react-icons/bs";
 import { MdTabletAndroid } from "react-icons/md";
+import { SiExpress , SiMedusa , SiMongodb} from "react-icons/si";
 
 const CategoriesData = [
   {
@@ -19,6 +20,18 @@ const CategoriesData = [
     description: "Tailwind CSS is a utility-first framework for web development, offering customizable, low-level utility classes. It enables rapid creation of custom designs with minimal CSS, prioritizing composability and responsiveness. Tailwind facilitates consistent, responsive layouts and encourages rapid prototyping and iteration. Its utility-based approach makes it a popular choice among developers for building modern, responsive web interfaces.",
   },
   {
+    icon: SiExpress,
+    description: "Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications. It facilitates the rapid development of Node-based web applications with its simple and intuitive API, middleware support, and powerful routing capabilities. Express.js simplifies handling requests, responses, and views, making it easier for developers to create scalable and efficient server-side applications."
+  },
+  {
+    icon: SiMedusa,
+    description: "Medusa.js is an open-source e-commerce framework designed for building customizable and scalable online stores. It features a modular architecture, flexible API, and a user-friendly admin interface. Medusa.js simplifies managing products, orders, and customers, and supports integrations with various payment and shipping providers, making it ideal for creating robust and tailored e-commerce solutions."
+  },
+  {
+    icon: SiMongodb,
+    description: "MongoDB is a popular open-source NoSQL database known for its flexibility, scalability, and performance. It stores data in a flexible, JSON-like format, allowing for easy and dynamic schema design. MongoDB supports powerful querying and indexing capabilities, enabling efficient data retrieval. With features like horizontal scaling, high availability, and robust security, MongoDB is widely used for modern web applications and large-scale data storage."
+  },
+  {
     icon: TbFileTypeHtml,
     description: "HTML, or HyperText Markup Language, is the backbone of the web, organizing content into elements like headings, paragraphs, links, and images. It employs tags and attributes to format content for browsers, forming the structure of web pages. HTML serves as the foundation for web development, facilitating the creation of accessible and well-structured websites that can be styled with CSS and made interactive with JavaScript.",
   },
@@ -30,6 +43,7 @@ const CategoriesData = [
     icon: MdTabletAndroid,
     description: "Android development is the creation of mobile applications for Android devices using languages like Java or Kotlin and tools like Android Studio. Apps range from simple utilities to complex enterprise solutions, leveraging features like sensors and location services. It's a dynamic field offering vast opportunities for developers to innovate and reach users worldwide through the Google Play Store.",
   },
+  
 ];
 
 const Techgrid = () => {

@@ -4,6 +4,7 @@ import { RiPlantLine, RiTailwindCssFill } from "react-icons/ri";
 import { FaPlaneDeparture } from "react-icons/fa";
 import { GiTrophiesShelf, GiWhistle } from "react-icons/gi";
 import { CiMobile3 } from "react-icons/ci";
+import { IoIosChatbubbles } from "react-icons/io";
 
 const CategoriesData = [
   {
@@ -31,6 +32,11 @@ const CategoriesData = [
     title: "Krushiaadhar App",
     description: "As part of the SSIP22 state-level hackathon competition, I worked on Krushiaadhar, a mobile application developed in Android Studio. This app allows farmers to learn new farming techniques, stay updated on market trends, and save personal and farm-related information. Our team was tasked with creating both a website and a mobile application; I was a member of the mobile app team, ensuring we delivered a functional, user-friendly solution to support farmers.",
   },
+  {
+    icon: IoIosChatbubbles,
+    title: "Chat Application",
+    description: "I developed a web-based Chat Application using Next.js and Tailwind CSS for the frontend. For the backend, I utilized MongoDB and Express.js, with Mongoose for database connectivity. This application allows users to register, log in, and engage in real-time chat with others. To enable real-time communication, I implemented WebSocket connections using Socket.io, ensuring a seamless and interactive chatting experience."
+  }
 ];
 
 const Techgrid = () => {
