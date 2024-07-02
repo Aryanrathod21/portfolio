@@ -32,7 +32,7 @@ const About = (props: Props) => {
         />
         <div className='absolute w-4/5 md:w-3/4 lg:w-2/3 h-24 bg-white bottom-[-42px] shadow-2xl flex justify-center items-center rounded-lg'>
           <div className='flex gap-4'>
-            <div className='relative group'>
+            <div className='relative group hover:scale-x-150 hover:scale-y-150 transition-all'>
               <a href="https://www.instagram.com/ar.yan21_" target="_blank" rel="noopener noreferrer">
                 <FaInstagram className='text-red-600 text-2xl' />
               </a>
@@ -40,7 +40,7 @@ const About = (props: Props) => {
                 Instagram
               </span>
             </div>
-            <div className='relative group'>
+            <div className='relative group hover:scale-x-150 hover:scale-y-150 transition-all'>
               <a href="https://www.linkedin.com/in/aryan-rathod" target="_blank" rel="noopener noreferrer">
                 <FaLinkedin className='text-blue-700 text-2xl' />
               </a>
@@ -48,7 +48,7 @@ const About = (props: Props) => {
                 LinkedIn
               </span>
             </div>
-            <div className='relative group'>
+            <div className='relative group hover:scale-x-150 hover:scale-y-150 transition-all'>
               <a href="https://github.com/Aryanrathod21" target="_blank" rel="noopener noreferrer">
                 <FaGithub className='text-black text-2xl' />
               </a>
