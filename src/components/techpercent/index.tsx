@@ -14,6 +14,7 @@ const skills: Skill[] = [
   { name: "HTML/CSS", percentage: 90 },
   { name: "ANDROID", percentage: 80 },
   { name: "TYPESCRIPT", percentage: 90 },
+  { name: "WordPress", percentage: 80 },
   { name: "C++", percentage: 70 },
   { name: "NODE JS", percentage: 80 },
 ];
