@@ -22,8 +22,8 @@ const skills: Skill[] = [
 
 const TechPercent = () => {
   return (
-    <div className="relative h-fit bg-cover bg-center bg-no-repeat bg-[url('/ace.jpg')] md:bg-[url('/luffydesk.jpg')]">
-      <div className="absolute inset-0 bg-black opacity-50"></div>
+    <div className="relative h-fit bg-cover bg-center bg-no-repeat ]">
+      <div className="absolute inset-0 bg-white opacity-50"></div>
       <div className="relative p-4">
         {skills.map((skill, index) => (
           <SkillBar key={index} skill={skill} />
@@ -54,8 +54,8 @@ const SkillBar: React.FC<SkillBarProps> = ({ skill }) => {
   return (
     <div ref={ref} className="mb-4">
       <div className="flex justify-between mb-1">
-        <span className="text-lg font-semibold text-white">{skill.name}</span>
-        <span className="text-lg font-semibold text-white">{percentage}%</span>
+        <span className="text-lg font-semibold text-black">{skill.name}</span>
+        <span className="text-lg font-semibold text-black">{percentage}%</span>
       </div>
       <div className="w-full bg-gray-200 rounded-full h-2.5">
         <div
