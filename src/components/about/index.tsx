@@ -16,7 +16,7 @@ const About = (props: Props) => {
         <p className='font-bold text-2xl'>Hello I'm Aryan Rathod</p>
         <p className='font-semibold text-lg'>Full-stack Developer</p>
         <p className='font-normal max-w-lg'>
-        I'm currently pursuing a degree in Computer Engineering at LDRP-ITR College in Gandhinagar and hail from Mahuva, Bhavnagar. I specialize in front-end development with expertise in Next.js, Tailwind CSS, and React.js. I am a full-stack developer with knowledge in backend technologies like MongoDB, Express.js, Medusa.js, and PostgreSQL. Passionate about continuous learning, I aim to further expand my skills. I am currently learning about WordPress and PHP.
+        I'm currently pursuing a degree in Computer Engineering at LDRP-ITR College in Gandhinagar and hail from Mahuva, Bhavnagar. I specialize in front-end development with expertise in Next.js, Tailwind CSS, and React.js. I am a full-stack developer with knowledge in backend technologies like MongoDB, Express.js, Medusa.js, and PostgreSQL. Passionate about continuous learning, I aim to further expand my skills. I am currently learning DSA.
         </p>
         <button onClick={openResume} className='mt-4 px-6 py-2 bg-green-500 text-white rounded-full hover:bg-red-600 flex items-center w-fit'>
           Resume <FaLongArrowAltRight className='ml-2' />
